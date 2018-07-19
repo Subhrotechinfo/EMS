@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+		<head>
+					  <title>Dashboard</title>
+					  <meta charset="utf-8">
+					  <meta name="viewport" content="width=device-width, initial-scale=1">
+					  <!-- favicon for EmployeeLoginPage -->
+					  <link rel="icon" href="images/brand.jpg" type="image/jpg" sizes="16x16">
+
+					  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+					  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+					  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+					  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+					  <style> </style>
+		</head>
+
+
+			<body>
+
+				<nav class="navbar navbar-expand-sm bg-white ">
+								<!-- Brand/logo -->
+						  <a class="navbar-brand" href="#">
+						    <img src="images/brand.jpg" alt="logo" width="40" height="40" class="rounded-circle">
+						  </a>
+
+					  <ul class="navbar-nav justify-content-end" style="padding-left: 1110px;">
+					    	<li class="nav-item">
+								
+									<!-- Adding logout support -->
+					      		<!-- <a class="nav-link" href="#" style="color: #009900;">Sign Out</a> -->
+								<button type="button" class="btn btn-light">SignOut</button>
+					    	</li>
+					</ul>
+				</nav>	    
+
+			<div class="container col-sm-12 py-4" ></div>
+				<div class="container border border-success	px-5 py-5">
+
+			  <!-- Nav pills -->
+			  	<div class="col-md-8 ">
+					  <ul class="nav nav-pills nav-tabs nav-justified" >
+					    <li class="nav-item">
+					      <a class="nav-link active " data-toggle="pill" href="#empDetails">Employee Details</a>
+					    </li>
+					    <li class="nav-item">
+					      <a class="nav-link " data-toggle="pill" href="#newEmp">New Employee </a>
+					    </li>
+					    <li class="nav-item">
+					      <a class="nav-link" data-toggle="pill" href="#payslip">Pay Slip</a>
+					    </li>
+					    <li class="nav-item">
+					      <a class="nav-link" data-toggle="pill" href="#search"> Search</a>
+					    </li>
+					  </ul>
+				</div>
+
+			  <!-- Tab panes -->
+				  <div class="tab-content">
+				  	
+				  	<div id="empDetails" class="container tab-pane active"><br>
+				      <h3 class="display-4">Basic Details Updation</h3>
+				      		<!-- Emp table updater -->
+				      		<div>
+				      				<table class="table table-dark table-hover">
+										    <thead>
+										      <tr>
+										        <th>Firstname</th>
+										        <th>Lastname</th>
+										        <th>Email</th>
+										        <th>Edit</th>
+										        <th>Delete</th>
+										      </tr>
+										    </thead>
+										    <tbody>
+										      <tr>
+										        <td>John</td>
+										        <td>Doe</td>
+										        <td>john@example.com</td>
+										        <td><button type="button" class="btn btn-warning">Change</button></td>
+										        <td><button type="button" class="btn btn-danger">Delete</button></td>
+										      </tr>
+										      <tr>
+										        <td>Mary</td>
+										        <td>Moe</td>
+										        <td>mary@example.com</td>
+										        <td><button type="button" class="btn btn-warning">Change</button></td>
+										        <td><button type="button" class="btn btn-danger">Delete</button></td>
+										      </tr>
+										      <tr>
+										        <td>July</td>
+										        <td>Dooley</td>
+										        <td>july@example.com</td>
+										        <td><button type="button" class="btn btn-warning">Change</button></td>
+										        <td><button type="button" class="btn btn-danger">Delete</button></td>
+										      </tr>
+										    </tbody>
+										  </table>
+				      		</div>
+				       
+				    </div>
+				    <div id="newEmp" class="container tab-pane fade"><br>
+				      <h3 class="display-4">Add a value to the World</h3>
+				      <h4 class="display-5">New Employee Form</h4>
+				      <div class="container bg-light ">
+				      		<form action=" " method="" class="px-5 py-5">
+							    
+								    <div class="form-group col-md-6">
+								      <label for="name">Name</label>
+								      <input type="text" class="form-control" id="name" placeholder="Enter employee name" name="name" data-toggle="tooltip" data-placement="right" title="enter a valid employee name" required/>
+								    </div>
+
+								    <div class="form-group col-md-6">
+								      <label for="email">Email </label>
+								      <input type="email" class="form-control" id="email" placeholder="Enter email id" name="email" data-toggle="tooltip" data-placement="right" title="enter a valid email id!" required/>
+								    </div>
+								    <div class="form-group col-md-6">
+								      <label for="date">Date Of Birth </label>
+								      <input type="date" class="form-control" id="date" placeholder="Enter date of birth" name="date" data-toggle="tooltip" data-placement="right" title="enter a date of birth"required/>
+								    </div>
+								    <div class="form-group col-md-6">
+								      <label for="address">Address </label>
+								      <textarea class="form-control"rows="3" id="adr" placeholder="Enter communication address" name="address" data-toggle="tooltip" data-placement="right" title="enter communication address" required></textarea>
+								    </div>
+
+								    <div class="form-group col-md-6">
+								      <label for="joiningdate">Joining Date</label>
+								      <input type="date" class="form-control" id="joiningdate" placeholder="Enter employee joiningdate" name="joiningdate" data-toggle="tooltip" data-placement="right" title="enter joining date" required/>
+								    </div>
+								    <div class="form-group col-md-6">
+								      <label for="department">Department</label>
+								      <input type="text" class="form-control" id="department" placeholder="Enter employee department" name="department" 
+								      data-toggle="tooltip" data-placement="right" title="enter a joining department" required/>
+								    </div>
+								    <div class="form-group col-md-6">
+								      <label for="linemanager">Line Manager</label>
+								      <input type="text" class="form-control" id="linemanager" placeholder="Enter employee linemanager" name="linemanager" data-toggle="tooltip" data-placement="right" title="enter line manager details" required/>
+								    </div>
+								    <div class="form-group col-md-6">
+								      <label for="package">Package <sup>*per annum</sup></label>
+								      <input type="number" class="form-control" id="package" placeholder="Enter employee package" name="package" data-toggle="tooltip" data-placement="right" title="enter salary per-annum" required/>
+								    </div>
+
+
+								    <div class="form-group form-check">
+								      <label class="form-check-label">
+								        <input class="form-check-input" type="checkbox" name="remember"> By adding the details you agree to the <u data-toggle="tooltip" data-placement="right" title="please click on the checkbox to agree">terms&condition</u>.
+								      </label>
+								    </div>
+							    	<button type="submit" class="btn btn-success">Submit</button>
+							    	<button type="submit" class="btn btn-info">Reset</button>
+							  </form>
+				      </div>
+					</div> <!-- Emp Add form ends -->
+
+					<!-- payslip -->
+				    <div id="payslip" class="container tab-pane fade"><br>
+				      <h3 class="display-4">PaySlip</h3>
+				      <h4 class="display-5" >Payslip generator</h4>
+
+				      <div class="col-md-6 px-2 py-2 ">
+				      		<div class="mb-3">
+				      			<label for="payslip">Enter employee id</label>
+								<input type="text" class="form-control" id="payslip" placeholder="Enter employee corporate id" name="payslip" data-toggle="tooltip" data-placement="right" title="this will genarate and send employee payslip to registered email id" />
+				      		</div>
+				      		
+							<button type="submit" class="btn btn-dark">Generate</button>
+				      </div>
+				    </div>
+
+				    <!-- search employees using searching algo -->
+				    <div id="search" class="container tab-pane fade"><br>
+				      <h3 class="display-4">Search</h3>
+
+				      		<div class="col-md-6 px-2 py-2 ">
+						      		<div class="mb-3">
+						      			<label for="payslip">Enter employee name</label>
+										<input type="text" class="form-control" id="payslip" placeholder="Enter employee name" name="payslip" data-toggle="tooltip" data-placement="right" title="search for an employee" />
+						      		</div>
+									<button type="submit" class="btn btn-dark">Search</button>
+				      		</div>
+				    </div> <!-- payslip end -->
+
+				 </div>
+			</div>
+			<br><br><br><br><br>
+
+			<!-- footer section -->
+			<!-- <div class="container col-sm-12   py-2" ></div> -->
+    			<div class=" container col-sm-10  bg-white text-center ">
+    					<!-- footer -->
+    					<footer>
+    						<p class="text-xs-center text-muted">Subhro Chatterjee &copy; Copyright 2018 - All rights reserved.</p>	
+    					</footer>
+    			</div>
+
+    			<!-- tooltip script -->
+    			<script>
+				$(document).ready(function(){
+				    $('[data-toggle="tooltip"]').tooltip();   
+				});
+			</script>
+
+	</body>
+</html>

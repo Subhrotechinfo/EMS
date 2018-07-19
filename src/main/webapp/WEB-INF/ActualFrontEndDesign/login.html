@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- favicon for EmployeeLoginPage -->
+<link rel="icon" href="images/brand.jpg" type="image/jpg" sizes="16x16">
+<title>Login Page</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+<!-- Add icon library -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+
+<!-- text carosal  bootstrap-->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+				<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
+ -->
+
+<!-- CSS styles  -->
+<link href="bootstrap-social.css" rel="stylesheet">
+<link href="fontawesome.css" rel="stylesheet">
+
+<style>
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #737373;
+	opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #737373;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+	color: #737373;
+}
+
+.sp1, .sp2 {
+	background-color: #008000;
+}
+
+.icon {
+	color: #ffffff;
+}
+
+.formCont {
+	padding: 80px 0px 0px 180px;
+}
+</style>
+<script>
+	function addEmployees();
+</script>
+</head>
+
+<body>
+
+	<!-- Nav bar -->
+	<div class="container-fluid clearfix">
+		<nav class="navbar navbar-expand-sm bg-white navbar ">
+			<!-- Brand/logo -->
+			<a class="navbar-brand" href="#"> <img src="images/brand.jpg"
+				alt="logo" width="40" height="40" class="rounded-circle">
+			</a>
+		</nav>
+
+	</div>
+
+	<div class="container col-md-11">
+		<div class="row">
+
+			<div class="col-md-5 bg-light triangle">
+				<h3 class="text-center pt-5 display-3">Hello there !!</h3>
+
+
+				<div class="container pt-5">
+					<div id="carouselContent" class="carousel slide"
+						data-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+							<div class="carousel-item active text-center p-4">
+								<img src="images/albert.jpg" class="rounded-circle"
+									alt="Cinque Terre" width="80" height="80">
+								<p>
+									<cite>Imagination is more important than knowledge. -
+										Albert Einstine</cite>
+								</p>
+							</div>
+							<div class="carousel-item text-center p-4">
+								<img src="images/stevejobs.jpg" class="rounded-circle"
+									alt="Cinque Terre" width="80" height="80">
+								<p>Innovation distinguishes between a leader and a follower.
+									-Steve Jobs</p>
+							</div>
+							<div class="carousel-item text-center p-4">
+								<img src="images/elon.jpg" class="rounded-circle"
+									alt="Cinque Terre" width="80" height="80">
+								<p>When something is important enough, you do it even if the
+									odds are not in your favor -Elon Musk</p>
+							</div>
+							<div class="carousel-item text-center p-4">
+								<img src="images/bill.jpg" class="rounded-circle"
+									alt="Cinque Terre" width="80" height="80">
+								<p>If you can't make it good, at least make it look good
+									-Bill Gates</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-1">
+				<!-- in between space -->
+			</div>
+
+			<!-- form -->
+			<div class="col-md-6 border border-success ">
+				<div class="formCont ">
+					<form:form
+						action="${pageContext.request.contextPath}/authenticateTheUser"
+						method="POST">
+						
+						<!-- Check for login error -->
+						<c:if test="${param.error != null}">
+								<div class="errormessage alert alert-danger col-sm-8">
+									Invalid username and password.
+								</div>
+						</c:if>
+						
+						<!-- <div class="alert alert-success col-sm-8"> -->
+						<!-- You have been logged out. -->
+						<!-- </div> -->
+
+
+						<div class=" col-sm-8 form-group input-group mb-3 ">
+							<div class="input-group-prepend">
+								<span class="input-group-text sp1"><i
+									class="fa fa-user icon"></i></span>
+							</div>
+							<input type="text" class="form-control" name="username"
+								placeholder="Username" data-toggle="tooltip"
+								data-placement="right" title="enter valid username" required />
+						</div>
+
+
+						<div class="col-sm-8 form-group input-group mb-3 ">
+							<div class="input-group-prepend">
+								<span class="input-group-text sp2"><i
+									class="fa fa-key icon"></i></span>
+							</div>
+							<input type="password" name="password" class="form-control"
+								placeholder="password" data-toggle="tooltip"
+								data-placement="right" title="enter your password" required />
+						</div>
+
+						<div class=" col-sm-8 form-group input-group mb-3 ">
+							<span class="psw" style="padding-left: 120px; font-size: 13px;">Forgot
+								<a href="#">password?</a>
+							</span>
+						</div>
+						<div class=" col-sm-8 form-group input-group mb-3">
+
+							<button type="button" class="btn btn-success ">Sign In</button>
+						</div>
+					</form:form>
+				</div>
+				<div class="p-4 text-center">
+					<p class="text-info">Connect with Us</p>
+					<button type="button"
+						class="btn btn-social-icon btn-twitter rounded-circle">
+						<span class="fa fa-twitter "></span>
+					</button>
+					<button type="button"
+						class="btn btn-social-icon btn-google rounded-circle">
+						<span class="fa fa-google"></span>
+					</button>
+					<button type="button"
+						class="btn btn-social-icon btn-facebook rounded-circle">
+						<span class="fa fa-facebook"></span>
+					</button>
+					<button
+						class="btn btn-social-icon btn-odnoklassniki rounded-circle">
+						<span class="fa fa-odnoklassniki"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container col-sm-12   py-4"></div>
+	<div class=" container col-sm-10  bg-white text-center ">
+		<!-- footer -->
+		<footer>
+			<p class="text-xs-center text-muted">Subhro Chatterjee &copy;
+				Copyright 2018 - All rights reserved.</p>
+		</footer>
+	</div>
+
+	<!-- to load the tooltip -->
+	<script>
+		$(document).ready(function() {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+</body>
+</html>
+

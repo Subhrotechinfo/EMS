@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+		<head>
+					  <title>EmpLoginDashbooard</title>
+					  <meta charset="utf-8">
+					  <meta name="viewport" content="width=device-width, initial-scale=1">
+					  <!-- favicon for LaCeiba -->
+	     			  <link rel="icon" href="images/brand.jpg" type="image/jpg" sizes="16x16" >
+					  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+					  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+					  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+					  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+					  <style> </style>
+		</head>
+			<body>
+				<nav class="navbar navbar-expand-sm bg-white ">
+								<!-- Brand/logo -->
+						  <a class="navbar-brand" href="#">
+						    <img src="images/brand.jpg" alt="logo" width="40" height="40" class="rounded-circle">
+						  </a>
+
+					  <ul class="navbar-nav justify-content-end" style="padding-left: 1110px;">
+					    	<li class="nav-item">
+					      		<a class="nav-link" href="#" style="color: #009900;">Sign Out</a>
+					    	</li>
+					</ul>
+				</nav>	    
+			 <div class="container col-sm-12   py-4" ></div>
+
+			<div class="container border border-success	px-5 py-5" >
+			  <!-- Nav pills -->
+			  	<div class="col-md-8 ">
+					  <ul class="nav nav-pills nav-tabs nav-justified" >
+					    <li class="nav-item">
+					      <a class="nav-link active " data-toggle="pill" href="#empPaySlip">Payslip </a>
+					    </li>
+					    <li class="nav-item">
+					      <a class="nav-link " data-toggle="pill" href="#leaves">Leave</a>
+					    </li>
+					    <li class="nav-item">
+					      <a class="nav-link" data-toggle="pill" href="#reimbursement">Reimburstment</a>
+					    </li>
+					  </ul>
+				</div>
+
+				<div class="tab-content">
+					<!-- Emp Payslip -->
+				  <div id="empPaySlip" class="container tab-pane active">
+				      <h3 class="display-4">View Payslip</h3>
+
+				      		<div class="col-md-6 px-5 py-2">				      			
+				      			<div class="dropdown">	
+				      				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">View Payslip </button>
+							      		<div class="dropdown-menu dropdown-menu-right">	
+							      				  <a class="dropdown-item" href="#">April 2018</a>		
+							      				  <a class="dropdown-item" href="#">May 2018</a>
+											      <a class="dropdown-item" href="#">June 2018</a>
+											      <a class="dropdown-item" href="#">July 2018</a>
+							      		</div>
+						      	</div>
+						      		<div>display the payslip here</div>
+				      		</div>
+				    </div>
+				    <!-- Emp Leave -->
+
+				    <div id="leaves" class="container tab-pane fade">
+				    	<h4>Apply Leaves</h4>
+				    	<form action="" method=""> 
+				    		<div class="form-group col-md-3">
+								      <label for="leave">From</label>
+								      <input type="date" class="form-control" id="name" placeholder="" name="leave" required/>
+								      <p>to</p>
+								      <input type="date" class="form-control" id="name" placeholder="" name="leave" required/>
+								   	 		   
+							 </div>
+							 <button type="button" class="btn btn-secondary ">Apply Leave</button>
+						</form> 
+				    </div>
+
+				    <!-- Emp Reimburstment -->
+				    <div id="reimbursement" class="container tab-pane fade">
+				    	<h4 class="display-5">Reimburstment</h4>
+				    		<form action="" method=""> 
+				    		<div class="form-group col-md-3">
+								      <label for="amount">Amount </label>
+								      <input type="number" class="form-control" id="amount" placeholder="please enter amount" name="amount" required/>
+								      <label for="reason">Reason</label>
+								      <input type="text" class="form-control" id="reason" placeholder="please enter a valid reason" name="reason" required/>
+								   	 		   
+							 </div>
+							 <button type="button" class="btn btn-secondary ">Submit</button>
+						</form>
+				    </div>
+				    
+				</div>
+			</div>
+			
+				<!-- footer section -->
+				<div class="container col-sm-12   py-4" ></div> 
+    			<div class=" container col-sm-10  bg-white text-center ">
+    					<!-- footer -->
+    					<footer>
+    						<p class="text-xs-center text-muted">Subhro Chatterjee &copy; Copyright 2018 - All rights reserved.</p>	
+    					</footer>
+    			</div>
+	</body>
+</html>

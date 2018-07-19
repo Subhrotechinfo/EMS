@@ -1,0 +1,182 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+  
+  
+  <groupId>com.springREST</groupId>
+  <artifactId>EmployeeManagementSystem-BaseAppv2</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+  
+		<springframework.version>5.0.2.RELEASE</springframework.version>
+		<springsecurity.version>5.0.0.RELEASE</springsecurity.version>
+		<hibernate.version>5.3.2.Final</hibernate.version>
+		
+		<mysql.connector.version>8.0.11</mysql.connector.version>
+		<c3po.version>0.9.5.2</c3po.version>
+		
+		
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+
+		<!-- Add Spring MVC and REST support -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		
+		<!--  Spring Security-->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-web</artifactId>
+		    <version>${springsecurity.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-config</artifactId>
+		    <version>${springsecurity.version}</version>
+		</dependency>
+			
+		<!--  AOP -->
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>1.9.1</version>
+		</dependency>
+		
+		<!--  Spring MAIL -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context-support</artifactId>
+		    <version>${springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.7</version>
+		</dependency>
+		
+		<!--  PDF -->
+		<dependency>
+		    <groupId>com.lowagie</groupId>
+		    <artifactId>itext</artifactId>
+		    <version>4.2.1</version>
+		</dependency>
+		
+		<!-- <dependency>
+		    <groupId>com.itextpdf</groupId>
+		    <artifactId>itextpdf</artifactId>
+		    <version>5.5.9</version>
+		</dependency> -->
+		
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.17</version>
+		</dependency>
+			 
+			
+		<!-- Add Jackson for JSON converters -->
+		 <dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.9.5</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-annotations</artifactId>
+		    <version>2.9.5</version>
+		</dependency>		
+		
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		
+		<!--  Hibernate Validator-->		
+		
+		
+		 
+		
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+
+		<!-- C3PO -->
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3po.version}</version>
+		</dependency>
+			
+
+		<!-- Add Servlet support for Spring's AbstractAnnotationConfigDispatcherServletInitializer -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+
+		<!-- Add support for JSP -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+
+   		<!-- JSTL-->
+   		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+		
+
+
+		 
+	</dependencies>
+
+	<!-- TO DO: Add support for Maven WAR Plugin -->
+		<build>
+			<finalName></finalName>
+			<pluginManagement>
+					<plugins>
+						<plugin>
+							<!--  Add Maven Coordinates for  (GAV):   -->
+							<groupId>org.apache.maven.plugins</groupId>
+    						<artifactId>maven-war-plugin</artifactId>
+    						<version>3.2.2</version>
+						</plugin>
+					</plugins>
+			</pluginManagement>
+		</build>
+</project>
+
