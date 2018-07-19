@@ -120,30 +120,7 @@ public class AppConfig implements WebMvcConfigurer{
 	public ViewResolver jsonViewResolver() {
 	return new JsonViewResolver();
 	}
-*/
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+*/		
 	//create data source
 	@Bean
 	public DataSource securityDatasource() {
@@ -241,7 +218,7 @@ public class AppConfig implements WebMvcConfigurer{
 
 			
 			mailSender.setUsername("doopchill@gmail.com");
-			mailSender.setPassword("Test1990@");
+			mailSender.setPassword("*****");
 			
 			Properties props = mailSender.getJavaMailProperties();
 			props.put("mail.transport.protocol", "smtp");
