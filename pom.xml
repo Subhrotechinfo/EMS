@@ -117,10 +117,6 @@
 		</dependency>
 		
 		<!--  Hibernate Validator-->		
-		
-		
-		 
-		
 		<!-- MySQL -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -156,12 +152,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
-		</dependency>
-		
-		
-
-
-		 
+		</dependency> 
 	</dependencies>
 
 	<!-- TO DO: Add support for Maven WAR Plugin -->
@@ -179,4 +170,3 @@
 			</pluginManagement>
 		</build>
 </project>
-
